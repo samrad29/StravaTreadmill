@@ -11,7 +11,7 @@ html {
     line-height: 1.6;
     font-weight: 400;
     font-family: "Roboto", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    color: #FFFFFF;
+    color: #080000;
   }
   
   /**
@@ -93,18 +93,24 @@ html {
   /* Full size background image */
   html, #container, .inner { background-color:transparent;}
   html {
-    background:url(background.jpg) center center no-repeat fixed;
-    background-size:cover;
+    background-color: #080000;
   }
   body {
     max-width:800px;
     margin:25px auto;
   }
+  body, #outer-box {
+    background-color:brown; 
+    padding: 25px;
+    border-radius: 25px;
+  }
   header, #content, footer { 
-    background: rgba(0,0,0,.8); 
+    background-color:brown;
     padding:25px;
     color:#FFFFFF; 
   }
+
+
   
   /* Menu Links */
   ul.main-menu {
