@@ -62,12 +62,6 @@ html {
   /**
    * Paragraphs
    */
-  p {
-    /* bottom margin for paragraphs */
-  }
-  p + p {
-  
-  }
   
   /**
    * Quotes & Blockquotes
