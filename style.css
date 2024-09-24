@@ -7,11 +7,18 @@ html {
     font-size: 62.5%;
   }
   body {
+    --color-primary: #0c0000;
+    --color-primary-dark: #0e0101;
+    --color-secondary: #ffffff;
+    --color-error: #cc3333;
+    --color-success: #4bb544;
+    --border-radius: 4px;
+    
     font-size: 1.5em; /* currently ems cause chrome bug misinterpreting rems on body element */
     line-height: 1.6;
     font-weight: 400;
     font-family: "Roboto", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    color: #080000;
+    color: #325d7662;
   }
   
   /**
@@ -56,7 +63,7 @@ html {
    * Paragraphs
    */
   p {
-    margin: 0 auto 1.5em auto; /* bottom margin for paragraphs */
+    /* bottom margin for paragraphs */
   }
   p + p {
   
@@ -93,7 +100,7 @@ html {
   /* Full size background image */
   html, #container, .inner { background-color:transparent;}
   html {
-    background-color: #080000;
+    background-color: #3a6a8662;
   }
   body {
     max-width:800px;
@@ -134,6 +141,112 @@ html {
     color:#FFFFFF;
     border-bottom-color:#EF6D3D;
   }
+
+
+  /*login forms*/
+  .form__input, .form__button {
+    font-family: "Roboto", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif; 
+  }
+  
+  .form--hidden {
+    display: none;
+  }
+
+  .form > *:first-child {
+    margin-top: 0;
+  }
+
+  .form > *:last-child {
+    margin-bottom: 0;
+  }
+
+  .form__title {
+    margin-bottom: 2rem;
+    text-align: center;
+    color: #FFFFFF;
+  }
+
+  .form__message {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
+  .form__message--success {
+    color: var(--color-success);
+  }
+
+  .form__message--error {
+    color: var(--color-error);
+  }
+
+  .form__input-group {
+    margin-bottom: 1rem;
+  }
+
+  .form__input {
+    display: block;
+    width: 100%;
+    padding: 0.75rem;
+    box-sizing: border-box;
+    border-radius: 4px;
+    border: 1px solid #dddddd;
+    outline: none;
+    background: #eeeeee;
+    transition: background 0.2s, border-color 0.2s;
+  } 
+
+  .form__input:focus {
+    border-color: var(--color-primary);
+    background: #ffffff;
+  }
+
+  .form__input--error {
+    color: var(--color-error);
+    border-color: var(--color-error);
+  }
+
+  .form__input-error-message {
+    margin-top: 0.5rem;
+    font-size: 0.85rem;
+    color: var(--color-error);
+  }
+
+  .form__button {
+    width: 100%;
+    padding: 1rem 2rem;
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #ffffff;
+    border: none;
+    border-radius: var(--border-radius);
+    outline: none;
+    cursor: pointer;
+    background: var(--color-primary);
+}
+
+  .form__button:hover {
+    background: var(--color-primary-dark);
+  }
+
+  .form__button:active {
+    transform: scale(0.98);
+  }
+
+  .form__text {
+    text-align: center;
+  }
+
+  .form__link {
+    color: var(--color-secondary);
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .form__link:hover {
+    text-decoration: underline;
+  }
+  
+
   
   /* Utility classes */
   .hide {
