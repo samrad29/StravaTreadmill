@@ -1,31 +1,33 @@
 <?php
 session_start();
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "login_system";
-
 // Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
+$db = new SQLite3('users.db');
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $email = $_POST['email'];
     $password = $_POST['password'];
 
     // Query the database for the user
-    $sql = "SELECT * FROM users WHERE email = '$email'";
-    $result = $conn->query($sql);
+    $query = "SELECT password FROM users WHERE username = :email";
+    $stmt = $db->prepare($query);
+    $stmt->bindValue(':username', $input_username, SQLITE3_TEXT);
+    $result = $stmt->execute();
+    $row = $result->fetchArray(SQLITE3_ASSOC);
 
-    if ($result->num_rows > 0) {
-        $row = $result->fetch_assoc();
-        if (password_verify($password, $row['password'])) {
+    if ($row) {
+        $stored_hashed_passwrd = $row['password'];
+
+        // verify the input password against the stored hash
+        if (password_verify($password, $stored_hashed_password)) {
             $_SESSION['user'] = $row['username']; // Store user in session
             echo "Login successful";
         } else {
             echo "Invalid password";
         }
     } else {
-        echo "No user found with this email";
+        echo "No user found with this username";
     }
 }
+
+$db->close()
 ?>
