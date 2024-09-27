@@ -10,8 +10,6 @@ html {
     --color-primary: #0c0000;
     --color-primary-dark: #0e0101;
     --color-secondary: #ffffff;
-    --color-error: #cc3333;
-    --color-success: #4bb544;
     --border-radius: 4px;
     
     font-size: 1.5em; /* currently ems cause chrome bug misinterpreting rems on body element */
@@ -160,17 +158,10 @@ html {
     color: #FFFFFF;
   }
 
-  .form__message {
+  .form__message{
     text-align: center;
     margin-bottom: 1rem;
-  }
-
-  .form__message--success {
-    color: var(--color-success);
-  }
-
-  .form__message--error {
-    color: var(--color-error);
+    color: #FFFFFF;
   }
 
   .form__input-group {
@@ -195,14 +186,14 @@ html {
   }
 
   .form__input--error {
-    color: var(--color-error);
-    border-color: var(--color-error);
+    color: #ffffff;
+    border-color: #ffffff;
   }
 
   .form__input-error-message {
     margin-top: 0.5rem;
     font-size: 0.85rem;
-    color: var(--color-error);
+    color: #ffffff;
   }
 
   .form__button {

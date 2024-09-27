@@ -10,7 +10,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     // Query the database for the user
     $query = "SELECT password FROM users WHERE username = :email";
     $stmt = $db->prepare($query);
-    $stmt->bindValue(':username', $input_username, SQLITE3_TEXT);
+    $stmt->bindValue(':username', $email, SQLITE3_TEXT);
     $result = $stmt->execute();
     $row = $result->fetchArray(SQLITE3_ASSOC);
 
