@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
         var $uName = $('#loginUserName');
         var $pWord = $('#loginPassword');
 
-        setFormMessage(loginForm, "error", "Invalid username/password combination");
+        setFormMessage(loginForm, "success", "login successful!");
 
         var loginInfo  = {
             email: $uName.val(),
@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
             data: loginInfo,
             success: function(response) {
                 if (response.includes('Login successful')) {
-                    window.location.href = 'treadmillForm.html'; // Redirect on success
+                    window.location.href = 'treadmillForm.php'; // Redirect on success
                 }
             },
             error: function() {
@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", () => {
         
         
 
-        setFormMessage(loginForm, "success", "something is working");
+        setFormMessage(loginForm, "error", "Incorect username/password");
     });
 
     document.querySelectorAll(".form__input").forEach(inputElement => {

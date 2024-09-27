@@ -17,7 +17,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if ($row) {
         // verify the input password
         if ($inputPassword == $row['password']) {
-            $_SESSION['user'] = $row['username']; // Store user in session
+            $_SESSION['user'] = $inputUsername; // Store user in session
+            $_SESSION['loggedIn'] = true;
+            $_SESSION['login_time'] = time();
             echo "Login successful";
         } else {
             echo "Invalid password";
