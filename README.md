@@ -24,7 +24,7 @@ II. Login page
     1. build UI
         a. need a form for users to enter in username and password
         b. continue button
-    2. build functionality
+    2. build functionality (there is something wrong in login.php)
         a. hitting the 'continue' button has to trigger interaction between client and server, this is where PHP is   supposed to come in. PHP is how you define the give instructions for client and server interactions
             - need this to check the username and password combo
                 - the AJAX is sending the POST request with the right data, there is something wrong in login.php
