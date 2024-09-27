@@ -20,7 +20,7 @@ I. landing page (optional)
     2. build functionality
         a. button that brings you to the login page
 
-II. Login page
+II. Login page (done?)
     1. build UI
         a. need a form for users to enter in username and password
         b. continue button
