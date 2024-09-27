@@ -21,25 +21,33 @@ document.addEventListener("DOMContentLoaded", () => {
     
     loginForm.addEventListener("submit", e => {
         e.preventDefault();
+        var $uName = $('#loginUserName');
+        var $pWord = $('#loginPassword');
 
         setFormMessage(loginForm, "error", "Invalid username/password combination");
 
-        var formData = $(this).serialize();
+        var loginInfo  = {
+            email: $uName.val(),
+            password: $pWord.val()
+        };
+
         $.ajax({
-            url: 'login.php',
             type: 'POST',
-            data: formData,
+            url: 'login.php',
+            data: loginInfo,
             success: function(response) {
-                $('#loginResponse').html(response);
                 if (response.includes('Login successful')) {
                     window.location.href = 'treadmillForm.html'; // Redirect on success
                 }
+            },
+            error: function() {
+                alert('Error loggin in')
             }
         });
         
         
 
-        setFormMessage(loginForm, "error", "Invalid username/password combination");
+        setFormMessage(loginForm, "success", "something is working");
     });
 
     document.querySelectorAll(".form__input").forEach(inputElement => {
