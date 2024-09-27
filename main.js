@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         $.ajax({
             type: 'POST',
-            url: '/API/login.php',
+            url: 'API/login.php',
             data: loginInfo,
             success: function(response) {
                 if (response.includes('Login successful')) {
