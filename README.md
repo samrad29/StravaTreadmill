@@ -27,6 +27,7 @@ II. Login page
     2. build functionality
         a. hitting the 'continue' button has to trigger interaction between client and server, this is where PHP is   supposed to come in. PHP is how you define the give instructions for client and server interactions
             - need this to check the username and password combo
+                - the AJAX is sending the POST request with the right data, there is something wrong in login.php
             - need to create a 'session' and store user with 'session'
                 ? how do sessions work ?
 
