@@ -38,6 +38,7 @@ IV. Strava Treadmill Function Page
     1. Build UI
         a. need form for the user to enter the workout the want to add
         b. need a logout button (optional)
-    2. need to add API calls that create new workouts for my strava account based on the information in the form
+    2. need to add API PUSH reqeusts that create new workouts for my strava account based on the information in the form
+    3. Have functionality built in to read past workouts for the user (have this done for my personal use, would need to change this slightly if you decide to open this up for other peoples use)
 
 
