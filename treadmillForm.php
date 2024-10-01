@@ -25,9 +25,9 @@ if(isset($_SESSION['login_time'])) {
 // Step 1: Exchange authorization code for access token
 // if we need to change scope, then would need to get a new authorization code and new refresh token
 $auth_url = "https://www.strava.com/oauth/token";
-$client_id = '135336';
-$client_secret = '15c127d4c7f38f3a412c4f9700f3cc9b5484165a';
-$refresh_token = '50fd40b61efec068ccfb5a5ab74a827f43fdf12b';  // From the redirect after user authorization
+$client_id = [inser_client_id];
+$client_secret = [insert_client_secret];
+$refresh_token = [insert_client_secret] ;// From the redirect after user authorization
 
 $fields = [
     'client_id' => $client_id,
