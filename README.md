@@ -13,7 +13,7 @@ PREREQ:
 
 TODO:
 
-Add to the treadmillForm.php file a form to add a new workout to the strava account
+Add to the treadmillForm.php file a form to add a new workout to the strava account - made some progress here... not uploading those files to github just yet
 
 IV. Strava Treadmill Function Page
     1. Build UI
@@ -22,5 +22,6 @@ IV. Strava Treadmill Function Page
 
     2. need to add API PUSH reqeusts that create new workouts for my strava account based on the information in the form
     3. Have functionality built in to read past workouts for the user (have this done for my personal use, would need to change this slightly if you decide to open this up for other peoples use)
+
 
 
